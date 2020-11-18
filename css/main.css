@@ -1,0 +1,326 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.loading-custom-animation{
+    z-index: 99999999;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    overflow: hidden;
+
+    transition: all 1s;
+}
+.loading-custom-animation .count{
+    font-size: 50px;
+    text-align: center;
+    color: #CBCBCB;
+    max-width: 100px;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    font-weight: 500;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.loading-custom-animation .count-block{
+    display: block;
+    max-width: 100%;
+    min-height: 100vh;
+}
+.hiden_loading-custom-animation{
+    min-height: 0;
+    max-height: 0;
+    
+}
+.hiden_loading-custom-animation_none{
+    display: none;
+   
+}
+.img_content {
+    display: none;
+    position: absolute;
+    top:30%;
+    left: 44%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.img_content img{
+    max-width: 200px;
+}
+.animate__rotateIn.img_content{
+    display: block;
+}
+.nav-toggle{
+  position: absolute;
+  right: -5000px;
+  width: 35px;
+  cursor: pointer;
+
+  transition: right .3s;
+}
+.min_menu_block{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 79;
+  background:#F1F1F1;
+}
+.min_menu_block .close_menu{
+    width: 75px;
+    height: 70px;
+    font-size: 24px;
+    color: white;
+    background: rgba(255, 0, 0, 1);
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition:background .5s;
+}
+.menu_list{
+    position: absolute !important;
+    text-align: center;
+    flex-direction: column !important;
+    left:50% !important;
+    margin-right: -50%;
+    top: 60vh !important;
+    transform: translate(-50%, -50%);
+  
+}
+.menu_list li a{
+  font-size: 30px !important;
+  color: red !important;
+  
+}
+.min_menu_block .close_menu:hover{
+  background: rgb(139, 1, 1);
+}
+.nav-toggle span{
+  text-align: right;
+  background: black;
+  display: block;
+  border:1.5px solid black;
+  margin-bottom: 7px;
+  
+}
+.nav-toggle .large_line{
+  margin-bottom: 7px;
+}
+.nav-toggle .small_line{
+  margin-top: 6px;
+  width: 20px;
+  margin-left: auto;
+}
+.heder-nav{
+    position: fixed;
+    width: 75%;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.heder-nav .nav-list{
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 0px;
+
+    transition: left 1s;
+}
+.heder-nav .nav-list .nav-link{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    color: white;
+    /* color: #CBCBCB; */
+}
+
+
+
+/* carousel start */
+/* * {
+    box-sizing: border-box;
+  }
+  
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    color: white;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+  }
+  .bottom h3 {
+    font-weight: 300;
+  }
+  
+  div[class^="slide"] {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    left: 100vw;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    position: absolute;
+  }
+  
+  .slide1 {
+    background: #FF6961;
+    color: white;
+  }
+  .slide1 img {
+    height: 30px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+  }
+  .slide1 .img2 {
+    height: 30px;
+    margin-top: 40px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+  }
+  .slide1 h2 {
+    margin: -20px;
+    color: #ae4742;
+  }
+  
+  .slide2 {
+    background: #FDFD96;
+    color: #b2b26d;
+  }
+  
+  .slide3 {
+    background: #77DD77;
+    color: #519651;
+  }
+  
+  .slide4 {
+    background: #779ECB;
+    color: #536f90;
+  }
+  
+  .slide5 {
+    background: #FFD1DC;
+    color: #b49098;
+  } */
+  /*carousel end  */
+  
+  
+  #nav{ position: relative; z-index:5000; text-align: center; }
+  
+  #Dots{ 
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+    z-index:7;
+    bottom:40%; 
+    left:20%;
+    transform:translate(-50%,0%);    
+  }
+  #Dots .Dot:last-child{
+    display: none;
+  }
+  .Dot{
+  display: block;
+   width:6px; 
+   height: 5px; 
+   border-radius: 50%;
+   position: relative;
+   float: left; 
+   background-color:black;
+   opacity:1;
+   margin-bottom:15px;
+   cursor: pointer;
+   /* border:2px solid rgba(0,0,0,0.7); */
+  }
+  
+  
+  .box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-family:'Oswald', arial; 
+    top:0px;
+    left:0px;
+  }
+  .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+  .home-page{
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+    height: 100vh;
+    outline: solid red;
+  }
+  .home-page .slide_home img{
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+
+    transition: transform 1s;
+  }
+  
+  /* .home-page .home_slide1 img{
+    transform: translateY(1000px);
+  }
+  .home-page .home_slide2 img{
+    transform: translateY(-1000px);
+  } */
+  /* .box:nth-child(1) {
+    background:url('../img/about-body.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  .box:nth-child(2) {
+    background:url('../img/about-header.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  .box:nth-child(3) {
+    background:url('../img/contact-header.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  .box:nth-child(4) {
+    background:url('../img/contact-jobs.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  .box:nth-child(5) {
+    background:url('../img/home-landing.jpg') no-repeat center center;
+    background-size: cover;
+  } */
+  
