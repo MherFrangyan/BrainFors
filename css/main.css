@@ -57,14 +57,7 @@ body{
 .animate__rotateIn.img_content{
     display: block;
 }
-.nav-toggle{
-  position: absolute;
-  right: -5000px;
-  width: 35px;
-  cursor: pointer;
 
-  transition: right .3s;
-}
 .min_menu_block{
   position: absolute;
   left: 0;
@@ -95,25 +88,55 @@ body{
     flex-direction: column !important;
     left:50% !important;
     margin-right: -50%;
-    top: 60vh !important;
+    top: 50vh !important;
     transform: translate(-50%, -50%);
   
 }
 .menu_list li a{
-  font-size: 30px !important;
-  color: red !important;
-  
+  text-transform: capitalize !important;
+  font-size: 50px !important;
+  color: black !important;
+  margin-bottom:5px !important;
+
+  transition: all .5s;
+
+}
+.menu_list li a:hover{
+  opacity: .5;
+}
+.menu_list li a.active:hover{
+  opacity: 1;
+  cursor: default;
+}
+.menu_list li a.active{
+  color: rgb(255, 0, 0) !important;
 }
 .min_menu_block .close_menu:hover{
   background: rgb(139, 1, 1);
 }
+.nav-toggle{
+  position: absolute;
+  right: -5000px;
+  width: 50px;
+  cursor: pointer;
+
+  transition: right .5s;
+}
+.nav-toggle:hover span{
+  margin: 0px auto 7px;
+}
+/* .nav-toggle:hover > .small_line {
+  margin: 6px auto ;
+
+} */
 .nav-toggle span{
-  text-align: right;
+  margin-left: auto;
+  width: 35px;
   background: black;
   display: block;
   border:1.5px solid black;
   margin-bottom: 7px;
-  
+
 }
 .nav-toggle .large_line{
   margin-bottom: 7px;
@@ -121,7 +144,6 @@ body{
 .nav-toggle .small_line{
   margin-top: 6px;
   width: 20px;
-  margin-left: auto;
 }
 .heder-nav{
     position: fixed;
