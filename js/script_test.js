@@ -36,9 +36,58 @@ $(document).ready(function(){
   
 });
 $('.scrolle_down_icon').on('click', ()=>{
-    homePages()
+    setTimeout(()=>{
+        $('.down_text').removeClass('down_text_show')
+        $('.scrolle_down').removeClass('scrolle_down_show')
+        setTimeout(()=>{
+            $('.inside_bg_hide').removeClass('inside_bg_show')
+            setTimeout(()=>{
+                $('.down_line').removeClass('down_line_hide')
+                $('.scrolle_down').removeClass('scrolle_down_show')
+                setTimeout(()=>{
+                    $('.slide_block').removeClass('d-none');
+                    $('.home_slide1 img').css('transform','translateY(1000px)');
+                    $('.home_slide2 img').css('transform','translateY(-1000px)');
+                    $('.nav-list').css('left','1000px');
+                    $('.nav-toggle').css('right', '-50px')
+                    setTimeout(()=>{
+                            
+                            $('.home-page').addClass("d-none");
+                            $('.nav-list').addClass("d-none");
+                            document.addEventListener("mousewheel",(e)=>{
+                                if(e.target.id === 'box_slide5' && e.deltaY < 0){
+                                    $('.nav-list').removeClass("d-none");
+                                    $('.home-page').removeClass("d-none");
+                                    setTimeout(()=> {
+                                        $('.home_slide1 img').css('transform','translateY(0px)');
+                                        $('.home_slide2 img').css('transform','translateY(0px)');
+                                        $('.nav-list').css('left','0px');
+                                        $('.nav-toggle').css('right', '-5000px')
+                                    },200)
+                                }
+                            });
+                    },1000);
+                    
+                    $('.mian_slider').css('transform', 'scale(1)')
+                    $('.content_block1').css('bottom', '50%')
+                    timeNext = setTimeout(()=>{
+                        $('.loader').addClass('d-none')
+                        $('.ball').css('z-index', '0')
+                        $('.loader1').removeClass('d-none')
+                        $('.ball1').css('z-index', '-1')
+                            // setTimeout(()=>{
+                            //     funcnext1()
+                            //     console.log('asas')
+                            // },5000)
+                    },2000)
+                        
+                },500)
+
+            },1200)
+        },500)
+    },400)
 })
-$('.home-page').on('mousewheel', function homePages (e) {
+$('.home-page').on('mousewheel', (e)=> {
     clearInterval(timeNext)
  setTimeout(()=>{
         $('.down_text').removeClass('down_text_show')
