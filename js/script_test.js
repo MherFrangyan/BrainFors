@@ -35,8 +35,10 @@ $(document).ready(function(){
    
   
 });
-
-$('.home-page').on('mousewheel', (e)=> {
+$('.scrolle_down_icon').on('click', ()=>{
+    homePages()
+})
+$('.home-page').on('mousewheel', function homePages (e) {
     clearInterval(timeNext)
  setTimeout(()=>{
         $('.down_text').removeClass('down_text_show')
