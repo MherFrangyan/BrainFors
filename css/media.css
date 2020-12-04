@@ -16,17 +16,19 @@
     .inside_bg_hide {
         right: 0 !important;
     }
-    .down_line .line_block1{
+    .down_line_hide.down_line .line_block1{
         margin-bottom: 10px;
-        height: 75px;
+        height: 90px;
         overflow: hidden;
+        width: 100%;
 
     }
-    .down_line .line_block2{
+    .down_line_hide.down_line .line_block2{
         border-left:none !important;
         margin-bottom: 5px;
         overflow: hidden;
-        height: 52px;
+        height: 85px;
+        width: 100%;
     }
     .hover_scrolle{
         width: 100% !important;
@@ -83,7 +85,16 @@
     .loading-custom-animation .img_content{
         left: 40%;
     }
+    .down_line .scrolle_down{
+        left: 101%;
+        width: 41%;
+        bottom: 35%;
+    }
 
+    /* more block */
+    .mian_slider.main_slide1_more .slide_1 .more_about_block{
+        
+    }
 }
 
 @media(max-width:767px) {

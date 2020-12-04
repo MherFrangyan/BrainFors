@@ -10,7 +10,8 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/media.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
+    <link rel="stylesheet" href="./css/main_test.css">
 
     <title>Brain Fors</title>
 </head>
@@ -47,9 +48,9 @@
         </div>
     </div>
 </div>
-<div class="home-page">
-    <div class="slide_home home_slide1"><img src="./img/solutions-price-1.jpg" alt=""></div>
-    <div class="slide_home home_slide2"><img src="./img/solutions-price-2.jpg" alt=""></div>
+ <div class="home-page">
+    <div class="slide_home home_slide1"> <div class="slide_home_overlay"></div><img src="./img/solutions-price-1.jpg" alt=""></div>
+    <div class="slide_home home_slide2"> <div class="slide_home_overlay"></div><img src="./img/solutions-price-2.jpg" alt=""></div>
     <div class="down_line">
         <div class="down_line_block">
             <div class="line_block1">
@@ -79,21 +80,30 @@
                 </div>
             </div>
             <div class="scroll_to p-0 ">
+                <div class="scroll_overlay"></div>
                 <div class="down_text ">
                     <p class="scroll_text">Scroll To</p>
                 </div>
             </div>
-        </div>
-        <div class="main_bg">
-            <div class="inside_bg_hide">
-    
+            <div class="main_bg">
+                <div class="inside_bg_hide">
+        
+                </div>
             </div>
         </div>
         
+        <div class="scrolle_down">
+            <p class="scrolle_down_icon">
+                <i class="fas fa-arrow-down"></i>
+            </p>
+        </div>
     </div>
-    
-</div>
-<!-- 
+   
+</div> 
+ 
+
+
+<!--     
 <div class="carousel_content">
 
     <div class="slide1 slide" id="slide1">
@@ -117,7 +127,8 @@
         <div class="right">dxxdx</div>
     </div>
 
-</div> -->
+</div>  -->
+
 <!-- <div class="slide_block d-none">
 
 <div class="box slide" ><img src="./img/about-body.jpg" alt="Photo" id="box_slide1"></div>
@@ -133,44 +144,91 @@
 
 <div class="mian_slider">
     <div class="slider_content">
-        <div class="_slide slide_1 active"><img src="./img/about-body.jpg" alt="">
+        <div class="_slide slide_1 active"><img class="more_about_img" src="./img/about-body.jpg" alt="">
         <div class="slide-overlay"></div>
             <div class="content_block content_block1">
             <h2 class="content-title">Brain Fors</h2>
             <div class="content-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Reprehenderit voluptas sit non nostrum officiis ex? Illo nisi suscipit aut dolorum.</div>
+            </div>
+            <div class="more_about_block">
+                <div class="about_content">
+                    <h2 class="about_content_title">Brain Fors</h2>
+                    <p class="about_content_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Voluptatibus maxime, quasi eius beatae ipsam mollitia sequi soluta facere laudantium 
+                        libero hic, omnis tempore rerum consequatur harum laboriosam reiciendis accusantium 
+                        minima voluptatem aut perspiciatis suscipit necessitatibus animi? 
+                        Veritatis incidunt molestiae possimus quidem nam at! 
+                        Autem quos quibusdam assumenda mollitia modi pariatur.</p>
+                </div> 
+                
+            </div>
         </div>
-        </div>
-        <div class="_slide slide_2"><img src="./img/about-header.jpg" alt="">
+        <div class="_slide slide_2"><img class="more_about_img" src="./img/about-header.jpg" alt="">
             <div class="slide-overlay"></div>
             <div class="content_block content_block2">
                 <h2 class="content-title">Brain Fors</h2>
                 <div class="content-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Reprehenderit voluptas sit non nostrum officiis ex? Illo nisi suscipit aut dolorum.</div>
             </div>
+            <div class="more_about_block">
+                <div class="about_content">
+                    <h2 class="about_content_title">Brain Fors</h2>
+                    <p class="about_content_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Voluptatibus maxime, quasi eius beatae ipsam mollitia sequi soluta facere laudantium 
+                        libero hic, omnis tempore rerum consequatur harum laboriosam reiciendis accusantium 
+                        minima voluptatem aut perspiciatis suscipit necessitatibus animi? 
+                        Veritatis incidunt molestiae possimus quidem nam at! 
+                        Autem quos quibusdam assumenda mollitia modi pariatur.</p>
+                </div> 
+                
+            </div>
+
         </div>
-        <div class="_slide slide_3"><img src="./img/contact-header.jpg" alt="">
+        <div class="_slide slide_3"><img class="more_about_img" src="./img/contact-header.jpg" alt="">
             <div class="slide-overlay"></div>
             <div class="content_block content_block3">
                 <h2 class="content-title">Brain Fors</h2>
                 <div class="content-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Reprehenderit voluptas sit non nostrum officiis ex? Illo nisi suscipit aut dolorum.</div>
             </div>
+            <div class="more_about_block">
+                <div class="about_content">
+                    <h2 class="about_content_title">Brain Fors</h2>
+                    <p class="about_content_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Voluptatibus maxime, quasi eius beatae ipsam mollitia sequi soluta facere laudantium 
+                        libero hic, omnis tempore rerum consequatur harum laboriosam reiciendis accusantium 
+                        minima voluptatem aut perspiciatis suscipit necessitatibus animi? 
+                        Veritatis incidunt molestiae possimus quidem nam at! 
+                        Autem quos quibusdam assumenda mollitia modi pariatur.</p>
+                </div> 
+            </div>
         </div>
-        <div class="_slide slide_4"><img src="./img/about-header.jpg" alt="">
+        <div class="_slide slide_4"><img class="more_about_img" src="./img/about-header.jpg" alt="">
             <div class="slide-overlay"></div>
             <div class="content_block content_block4">
                 <h2 class="content-title">Brain Fors</h2>
                 <div class="content-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Reprehenderit voluptas sit non nostrum officiis ex? Illo nisi suscipit aut dolorum.</div>
             </div>
+            <div class="more_about_block">
+                <div class="about_content">
+                    <h2 class="about_content_title">Brain Fors</h2>
+                    <p class="about_content_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Voluptatibus maxime, quasi eius beatae ipsam mollitia sequi soluta facere laudantium 
+                        libero hic, omnis tempore rerum consequatur harum laboriosam reiciendis accusantium 
+                        minima voluptatem aut perspiciatis suscipit necessitatibus animi? 
+                        Veritatis incidunt molestiae possimus quidem nam at! 
+                        Autem quos quibusdam assumenda mollitia modi pariatur.</p>
+                </div> 
+            </div>
         </div>
     </div>
     <ul class="slide_pagination">
-        <li class="pagin pagin1 active" onclick="clickChangedSlide('pagin1')"><span class="loader loader1"></span><i class="ball ball1"></i> </li>
+        <li class="pagin pagin1 active" onclick="clickChangedSlide('pagin1')"><span class="loader loader1 d-none"></span><i class="ball ball1"></i> </li>
         <li class="pagin pagin2" onclick="clickChangedSlide('pagin2')"><span class="loader loader2 d-none"></span><i class="ball ball2"></i></li>
         <li class="pagin pagin3" onclick="clickChangedSlide('pagin3')"><span class="loader loader3 d-none"></span><i class="ball ball3"></i></li>
-        <li class="pagin pagin4" onclick="clickChangedSlide('pagin4')"><i></i></li>
+        <li class="pagin pagin4" onclick="clickChangedSlide('pagin4')"><span class="loader loader4 d-none"></span><i class="ball ball4"></li>
     </ul>
 </div>
 
@@ -180,12 +238,12 @@
 
 <!-- page loader start -->
 
-     <div class="loading-custom-animation">
+     <!-- <div class="loading-custom-animation">
         <div class="img_content animate__animated">
             <img src="./img/Group 19.png" alt="">
         </div>
         <div class="count-block"><span class="count">0</span></div>
-    </div> 
+    </div>  -->
 
 <!-- page loader end -->
     
@@ -198,7 +256,9 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://kit.fontawesome.com/4286680757.js" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/script_test.js"></script>
+
 </body>
 
 </html>
