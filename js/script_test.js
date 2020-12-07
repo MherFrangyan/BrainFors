@@ -420,7 +420,7 @@ function activeSlide4(width){
 }
 
 // maous weel slide 1
-$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("wheel touchstart", (e) => {
+$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("touchend touchstart", (e) => {
     console.log('slide1')
 
     if(e.originalEvent.deltaY > 0){
