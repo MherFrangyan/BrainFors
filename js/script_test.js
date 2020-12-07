@@ -177,7 +177,6 @@ var clickTimeout =null;
 // slide next function
 
 function funcnext1(){
-    console.log('funcnext1')
     $('.slide_1 .slide-overlay').addClass('d-none')
     $('.mian_slider').addClass('main_slide1_more')
     $('.loader').addClass('d-none')
@@ -189,7 +188,6 @@ function funcnext1(){
     
 }
 function funcnext2(){
-    console.log('funcnext2')
     $('.slide_2 .slide-overlay').addClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')
     $('.mian_slider').addClass('main_slide2_more')
@@ -420,9 +418,14 @@ function activeSlide4(width){
 }
 
 // maous weel slide 1
-$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("touchend touchstart", (e) => {
-    console.log('slide1')
+// $('.mian_slider .slide_1 .slide-overlay').swipe({
+//     swipe:function(e) {
+//         console.log(e,'eee')
+//       },
+// })
 
+$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("wheel", (e) => {
+   
     if(e.originalEvent.deltaY > 0){
         
         funcnext1()
@@ -453,9 +456,9 @@ $('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' )
     
 })
 
+
 // maous weel slide 1 next to slide 2
-$('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_img').on("wheel touchstart", (e) => {
-    console.log('slide1-2')
+$('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_img').on("wheel", (e) => {
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
     //     clearTimeout(timeoutPrev)
@@ -476,7 +479,7 @@ $('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_im
 })
 
 // maous weel slide 2
-$('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' ).on("wheel touchstart", (e) => {
+$('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' ).on("wheel", (e) => {
     console.log('slide2')
     if(e.originalEvent.deltaY > 0){
        
@@ -508,7 +511,7 @@ $('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' )
 })
 
 // maous weel slide 2 next to slide 3
-$('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_img').on("wheel touchstart", (e) => {
+$('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_img').on("wheel", (e) => {
     console.log('sdcsdcsdc,slide2')
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
@@ -527,7 +530,7 @@ $('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_im
 })
 
 // maous weel slide 3
-$('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' ).on("wheel touchstart", (e) => {
+$('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' ).on("wheel", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         funcnext3()
@@ -558,7 +561,7 @@ $('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' )
 })
 
 // maous weel slide 3 next to slide 4
-$('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_img').on("wheel touchstart", (e) => {
+$('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_img').on("wheel", (e) => {
 
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
@@ -579,7 +582,7 @@ $('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_im
 })
 
 // maous weel slide 4
-$('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' ).on("wheel touchstart", (e) => {
+$('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' ).on("wheel", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         funcnext4()
@@ -622,7 +625,7 @@ $('.mian_slider .slide_4 .more_about_block, .mian_slider .slide_4 .more_about_im
 
 })
 
-function scrollChangeSlide1(e){
+document.querySelector('#scrolldown1').addEventListener('click', function (e){
     if(e.path[2].className === 'scrolle_down_respons more_color'){
         viewSlide1()
     }else{
@@ -630,20 +633,19 @@ function scrollChangeSlide1(e){
     }
 
     
-}
+})
 
-function scrollChangeSlide2(e){
+document.querySelector('#scrolldown2').addEventListener('click', function (e){
     if(e.path[2].className === 'scrolle_down_respons more_color'){
-        console.log('red')
         viewSlide2()
     }else{
-        console.log('black')
         funcnext2()
     }
 
     
-}
-function scrollChangeSlide3(e){
+})
+
+document.querySelector('#scrolldown3').addEventListener('click', function (e){
     if(e.path[2].className === 'scrolle_down_respons more_color'){
         viewSlide3()
     }else{
@@ -651,8 +653,10 @@ function scrollChangeSlide3(e){
     }
 
     
-}
-function scrollChangeSlide4(e){
+})
+
+
+document.querySelector('#scrolldown4').addEventListener('click', function (e){
     if(e.path[2].className === 'scrolle_down_respons more_color'){
         return
     }else{
@@ -660,4 +664,4 @@ function scrollChangeSlide4(e){
     }
 
     
-}
+})
