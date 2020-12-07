@@ -625,8 +625,9 @@ $('.mian_slider .slide_4 .more_about_block, .mian_slider .slide_4 .more_about_im
 
 })
 
-document.querySelector('#scrolldown1').addEventListener('click', function (e){
-    if(e.path[2].className === 'scrolle_down_respons more_color'){
+$('#scrolldown1').on('click', function (e){
+    console.log(e.currentTarget.parentElement.className)
+    if(e.currentTarget.parentElement.className === 'scrolle_down_respons more_color'){
         viewSlide1()
     }else{
         funcnext1()
