@@ -88,7 +88,7 @@ $('.scrolle_down .scrolle_down_icon').on('click', ()=>{
         },500)
     },400)
 })
-$('.home-page').on('mousewheel', (e)=> {
+$('.home-page').on('mousewheel swipe', (e)=> {
     clearInterval(timeNext)
  setTimeout(()=>{
         $('.down_text').removeClass('down_text_show')
@@ -420,7 +420,7 @@ function activeSlide4(width){
 }
 
 // maous weel slide 1
-$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("wheel", (e) => {
+$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("wheel swipe", (e) => {
     console.log('slide1')
 
     if(e.originalEvent.deltaY > 0){
@@ -454,7 +454,7 @@ $('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' )
 })
 
 // maous weel slide 1 next to slide 2
-$('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_img').on("wheel", (e) => {
+$('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_img').on("wheel swipe", (e) => {
     console.log('slide1-2')
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
@@ -476,7 +476,7 @@ $('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_im
 })
 
 // maous weel slide 2
-$('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' ).on("wheel", (e) => {
+$('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' ).on("wheel swipe", (e) => {
     console.log('slide2')
     if(e.originalEvent.deltaY > 0){
        
@@ -508,7 +508,7 @@ $('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' )
 })
 
 // maous weel slide 2 next to slide 3
-$('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_img').on("wheel", (e) => {
+$('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_img').on("wheel swipe", (e) => {
     console.log('sdcsdcsdc,slide2')
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
@@ -527,7 +527,7 @@ $('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_im
 })
 
 // maous weel slide 3
-$('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' ).on("wheel", (e) => {
+$('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' ).on("wheel swipe", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         funcnext3()
@@ -558,7 +558,7 @@ $('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' )
 })
 
 // maous weel slide 3 next to slide 4
-$('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_img').on("wheel", (e) => {
+$('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_img').on("wheel swipe", (e) => {
 
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
@@ -579,7 +579,7 @@ $('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_im
 })
 
 // maous weel slide 4
-$('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' ).on("wheel", (e) => {
+$('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' ).on("wheel swipe", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         funcnext4()
@@ -609,7 +609,7 @@ $('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' )
     
 })
 
-$('.mian_slider .slide_4 .more_about_block, .mian_slider .slide_4 .more_about_img').on("wheel", (e) => {
+$('.mian_slider .slide_4 .more_about_block, .mian_slider .slide_4 .more_about_img').on("wheel swipe", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         return
