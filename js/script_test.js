@@ -35,7 +35,7 @@ $(document).ready(function(){
    
   
 });
-$('.scrolle_down_icon').on('click', ()=>{
+$('.scrolle_down .scrolle_down_icon').on('click', ()=>{
     setTimeout(()=>{
         $('.down_text').removeClass('down_text_show')
         $('.scrolle_down').removeClass('scrolle_down_show')
@@ -70,6 +70,7 @@ $('.scrolle_down_icon').on('click', ()=>{
                     
                     $('.mian_slider').css('transform', 'scale(1)')
                     $('.content_block1').css('bottom', '50%')
+                    $('.scrolle_down_respons .scrolle_down_icon').css('transform','translate(0px)')
                     timeNext = setTimeout(()=>{
                         $('.loader').addClass('d-none')
                         $('.ball').css('z-index', '0')
@@ -176,22 +177,26 @@ var clickTimeout =null;
 // slide next function
 
 function funcnext1(){
+    console.log('funcnext1')
     $('.slide_1 .slide-overlay').addClass('d-none')
     $('.mian_slider').addClass('main_slide1_more')
     $('.loader').addClass('d-none')
     $('.ball1').css('z-index', '0')
     $('.main_slide1_more .content_block1').css('bottom','200%')
+    $('.scrolle_down_respons').addClass('more_color')
     
     
     
 }
 function funcnext2(){
+    console.log('funcnext2')
     $('.slide_2 .slide-overlay').addClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')
     $('.mian_slider').addClass('main_slide2_more')
     $('.loader').addClass('d-none')
     $('.ball2').css('z-index', '0')
     $('.content_block2').css('left', '-4000px')
+    $('.scrolle_down_respons').addClass('more_color')
     
 }
 function funcnext3(){
@@ -202,6 +207,7 @@ function funcnext3(){
     $('.mian_slider').addClass('main_slide3_more')
     $('.main_slide3_more .slide_3 .more_about_img').css('transform','scale(0.8)')
     $('.content_block3').css('transform', 'scale(0)')
+    $('.scrolle_down_respons').addClass('more_color')
     setTimeout(()=>{
         $('.main_slide3_more .slide_3 .more_about_img').css('left','50%')
         setTimeout(()=>{
@@ -217,6 +223,7 @@ function funcnext4(){
     $('.loader').addClass('d-none')
     $('.ball4').css('z-index', '0')
     $('.content_block4').css('bottom', '-4500px')
+    $('.scrolle_down_respons').addClass('more_color')
 }
 
 
@@ -235,6 +242,7 @@ function funcprev1() {
     $('.ball').css('z-index', '0')
     $('.ball1').css('z-index', '-1')
     $('.content_block1').css('bottom', '50%')
+    $('.scrolle_down_respons').removeClass('more_color')
     // timeoutPrev = setTimeout(()=>{
     //     funcnext1()
     // },5000)
@@ -253,6 +261,7 @@ function funcprev2() {
     $('.ball').css('z-index', '0')
     $('.ball2').css('z-index', '-1')
     $('.content_block2').css('left', '20%')
+    $('.scrolle_down_respons').removeClass('more_color')
     // timeoutPrev = setTimeout(()=>{
     //     funcnext2()
     // },5000)
@@ -265,6 +274,7 @@ function funcprev3() {
     // }
     $('.slide_3 .slide-overlay').removeClass('d-none')
     $('.mian_slider').removeClass('main_slide3_more')
+    $('.scrolle_down_respons').removeClass('more_color')
     
     setTimeout(()=>{
         $('.content_block3').css('transform', 'scale(1)')
@@ -294,6 +304,7 @@ function funcprev4() {
     $('.loader4').removeClass('d-none')
     $('.ball').css('z-index', '0')
     $('.ball4').css('z-index', '-1')
+    $('.scrolle_down_respons').removeClass('more_color')
 
     // timeoutPrev = setTimeout(()=>{
     //     funcnext4()
@@ -301,6 +312,82 @@ function funcprev4() {
 }
 
 // next scrolling end
+
+
+// next view slide 
+
+function viewSlide1(){
+    setTimeout(()=> {
+        $('.slider_content').css('transform',`translateX(${-window.innerWidth}px)`)
+        $('.mian_slider').removeClass('main_slide1_more')
+        $('.scrolle_down_respons').removeClass('more_color')
+        setTimeout(()=>{
+            $('.content_block2').css('left', '20%')
+        },400)
+    },360)
+    
+        $('.pagin').removeClass('active')
+    setTimeout(()=>{
+        $('.slide_1 .slide-overlay').removeClass('d-none')
+        $('.loader').addClass('d-none')
+        $('.loader2').removeClass('d-none')
+        $('.ball').css('z-index', '0')
+        $('.ball2').css('z-index', '-1')
+        $('.pagin').removeClass('active')
+        $('.pagin2').addClass('active')
+
+        
+    },800)
+    
+}
+function viewSlide2(){
+    setTimeout(()=> {
+        $('.slide_2 .slide-overlay').removeClass('d-none')
+        $('.scrolle_down_respons').removeClass('more_color')
+        $('.slider_content').css('transform',`translateX(${-window.innerWidth*2}px)`)
+        $('.mian_slider').removeClass('main_slide2_more')
+    },360)
+        $('.pagin').removeClass('active')
+        $('.content_block3').css('transform', 'scale(1)')
+
+    setTimeout(()=>{
+        $('.loader').addClass('d-none')
+        $('.loader3').removeClass('d-none')
+        $('.ball').css('z-index', '0')
+        $('.ball3').css('z-index', '-1')
+        $('.pagin').removeClass('active')
+        $('.pagin3').addClass('active')
+        
+        // timeoutNext = setTimeout(()=>{
+        //     funcnext3()
+        // },5000)
+
+    },1000)
+}
+function viewSlide3(){
+    setTimeout(()=> {
+        $('.slide_3 .slide-overlay').removeClass('d-none')
+        $('.scrolle_down_respons').removeClass('more_color')
+        $('.slider_content').css('transform',`translateX(${-window.innerWidth*3}px)`)
+        $('.mian_slider').removeClass('main_slide3_more')
+        $('.content_block4').css('bottom', '45%')
+    },360)
+        $('.pagin').removeClass('active')
+        
+    setTimeout(()=>{
+        $('.loader').addClass('d-none')
+        $('.loader4').removeClass('d-none')
+        $('.ball').css('z-index', '0')
+        $('.ball4').css('z-index', '-1')
+        $('.pagin').removeClass('active')
+        $('.pagin4').addClass('active')
+        
+    },1000)
+}
+
+
+// next view slide end
+
 
 
 // clicke active slide
@@ -377,28 +464,7 @@ $('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_im
     // }
 
     if(e.originalEvent.deltaY > 0){
-        
-        setTimeout(()=> {
-            $('.slider_content').css('transform',`translateX(${-window.innerWidth}px)`)
-            $('.mian_slider').removeClass('main_slide1_more')
-            setTimeout(()=>{
-                $('.content_block2').css('left', '20%')
-            },400)
-        },360)
-        
-            $('.pagin').removeClass('active')
-        setTimeout(()=>{
-            $('.slide_1 .slide-overlay').removeClass('d-none')
-            $('.loader').addClass('d-none')
-            $('.loader2').removeClass('d-none')
-            $('.ball').css('z-index', '0')
-            $('.ball2').css('z-index', '-1')
-            $('.pagin').removeClass('active')
-            $('.pagin2').addClass('active')
-
-            
-        },800)
-        
+        viewSlide1()
         // timeoutNext = setTimeout(()=>{
         //     funcnext2()
         // },5000)
@@ -451,28 +517,7 @@ $('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_im
     // }
     if(e.originalEvent.deltaY > 0){
 
-        setTimeout(()=> {
-            $('.slide_2 .slide-overlay').removeClass('d-none')
-
-            $('.slider_content').css('transform',`translateX(${-window.innerWidth*2}px)`)
-            $('.mian_slider').removeClass('main_slide2_more')
-        },360)
-            $('.pagin').removeClass('active')
-            $('.content_block3').css('transform', 'scale(1)')
-
-        setTimeout(()=>{
-            $('.loader').addClass('d-none')
-            $('.loader3').removeClass('d-none')
-            $('.ball').css('z-index', '0')
-            $('.ball3').css('z-index', '-1')
-            $('.pagin').removeClass('active')
-            $('.pagin3').addClass('active')
-            
-            // timeoutNext = setTimeout(()=>{
-            //     funcnext3()
-            // },5000)
-
-        },1000)
+        viewSlide2()
         
     }else{
 
@@ -522,23 +567,7 @@ $('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_im
     // }
     if(e.originalEvent.deltaY > 0){
 
-        setTimeout(()=> {
-            $('.slide_3 .slide-overlay').removeClass('d-none')
-            $('.slider_content').css('transform',`translateX(${-window.innerWidth*3}px)`)
-            $('.mian_slider').removeClass('main_slide3_more')
-            $('.content_block4').css('bottom', '45%')
-        },360)
-            $('.pagin').removeClass('active')
-            
-        setTimeout(()=>{
-            $('.loader').addClass('d-none')
-            $('.loader4').removeClass('d-none')
-            $('.ball').css('z-index', '0')
-            $('.ball4').css('z-index', '-1')
-            $('.pagin').removeClass('active')
-            $('.pagin4').addClass('active')
-            
-        },1000)
+       viewSlide3()
         // timeoutNext = setTimeout(()=>{
         //     funcnext4()
         // },5000)
@@ -592,3 +621,43 @@ $('.mian_slider .slide_4 .more_about_block, .mian_slider .slide_4 .more_about_im
     }
 
 })
+
+function scrollChangeSlide1(e){
+    if(e.path[2].className === 'scrolle_down_respons more_color'){
+        viewSlide1()
+    }else{
+        funcnext1()
+    }
+
+    
+}
+
+function scrollChangeSlide2(e){
+    if(e.path[2].className === 'scrolle_down_respons more_color'){
+        console.log('red')
+        viewSlide2()
+    }else{
+        console.log('black')
+        funcnext2()
+    }
+
+    
+}
+function scrollChangeSlide3(e){
+    if(e.path[2].className === 'scrolle_down_respons more_color'){
+        viewSlide3()
+    }else{
+        funcnext3()
+    }
+
+    
+}
+function scrollChangeSlide4(e){
+    if(e.path[2].className === 'scrolle_down_respons more_color'){
+        return
+    }else{
+        funcnext4()
+    }
+
+    
+}

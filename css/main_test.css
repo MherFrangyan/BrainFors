@@ -114,6 +114,7 @@ body{
 .min_menu_block .close_menu:hover{
   background: rgb(139, 1, 1);
 }
+
 .nav-toggle{
   position: absolute;
   right: -5000px;
@@ -748,6 +749,27 @@ position: relative;
   transform: translateY(20px);
   color: red;
 }
+
+.scrolle_down_respons{
+  position: absolute;
+  height: 45px;
+  bottom: 18%;
+  left: 0px;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+.scrolle_down_respons .scrolle_down_icon{
+  font-size: 30px;
+  color: white;
+
+  transition: all 1s;
+}
+
+.more_color .scrolle_down_icon{
+  color: red;
+}
+
 
 
 /* Safari */
