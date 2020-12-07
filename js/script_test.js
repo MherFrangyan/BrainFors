@@ -424,7 +424,7 @@ function activeSlide4(width){
 //       },
 // })
 
-$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("wheel touchmove", (e) => {
+$('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' ).on("wheel", (e) => {
    console.log(e,'e')
     if(e.originalEvent.deltaY > 0){
         
@@ -458,7 +458,7 @@ $('.mian_slider .slide_1 .slide-overlay, .mian_slider .slide_1 .content_block' )
 
 
 // maous weel slide 1 next to slide 2
-$('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_img').on("wheel touchstart", (e) => {
+$('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_img').on("wheel", (e) => {
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
     //     clearTimeout(timeoutPrev)
@@ -479,7 +479,7 @@ $('.mian_slider .slide_1 .more_about_block, .mian_slider .slide_1 .more_about_im
 })
 
 // maous weel slide 2
-$('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' ).on("wheel touchstart", (e) => {
+$('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' ).on("wheel", (e) => {
     console.log('slide2')
     if(e.originalEvent.deltaY > 0){
        
@@ -511,7 +511,7 @@ $('.mian_slider .slide_2 .slide-overlay, .mian_slider .slide_2 .content_block' )
 })
 
 // maous weel slide 2 next to slide 3
-$('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_img').on("wheel touchstart", (e) => {
+$('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_img').on("wheel", (e) => {
     console.log('sdcsdcsdc,slide2')
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
@@ -530,7 +530,7 @@ $('.mian_slider .slide_2 .more_about_block, .mian_slider .slide_2 .more_about_im
 })
 
 // maous weel slide 3
-$('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' ).on("wheel touchstart", (e) => {
+$('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' ).on("wheel", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         funcnext3()
@@ -561,7 +561,7 @@ $('.mian_slider .slide_3 .slide-overlay, .mian_slider .slide_3 .content_block' )
 })
 
 // maous weel slide 3 next to slide 4
-$('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_img').on("wheel touchstart", (e) => {
+$('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_img').on("wheel", (e) => {
 
     // if(timeoutPrev || timeoutNext || clickTimeout) {
     //     clearTimeout(timeoutNext)
@@ -582,7 +582,7 @@ $('.mian_slider .slide_3 .more_about_block, .mian_slider .slide_3 .more_about_im
 })
 
 // maous weel slide 4
-$('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' ).on("wheel touchstart", (e) => {
+$('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' ).on("wheel", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         funcnext4()
@@ -612,7 +612,7 @@ $('.mian_slider .slide_4 .slide-overlay, .mian_slider .slide_4 .content_block' )
     
 })
 
-$('.mian_slider .slide_4 .more_about_block, .mian_slider .slide_4 .more_about_img').on("wheel touchstart", (e) => {
+$('.mian_slider .slide_4 .more_about_block, .mian_slider .slide_4 .more_about_img').on("wheel", (e) => {
     if(e.originalEvent.deltaY > 0){
 
         return
