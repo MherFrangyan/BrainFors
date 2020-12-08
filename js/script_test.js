@@ -398,6 +398,12 @@ function viewSlide3(){
 // clicke active slide
 
 function clickChangedSlide1(pagin, e) {
+    $('.scrolle_down_respons').removeClass('more_color')
+    $('._slide .slide-overlay').removeClass('d-none')
+    $('.mian_slider').removeClass('main_slide1_more')
+    $('.mian_slider').removeClass('main_slide2_more')
+    $('.mian_slider').removeClass('main_slide3_more')
+    $('.mian_slider').removeClass('main_slide4_more')
     $('.slider_content').css('transform',`translateX(${0}px)`) 
     $('.loader').addClass('d-none')
     $('.loader1').removeClass('d-none')
@@ -410,6 +416,12 @@ function clickChangedSlide1(pagin, e) {
 }
 
 function clickChangedSlide2(pagin, e) {
+    $('.scrolle_down_respons').removeClass('more_color')
+    $('._slide .slide-overlay').removeClass('d-none')
+    $('.mian_slider').removeClass('main_slide1_more')
+    $('.mian_slider').removeClass('main_slide2_more')
+    $('.mian_slider').removeClass('main_slide3_more')
+    $('.mian_slider').removeClass('main_slide4_more')
     $('.slider_content').css('transform',`translateX(${-window.innerWidth}px)`) 
     $('.loader').addClass('d-none')
     $('.loader2').removeClass('d-none')
@@ -420,11 +432,17 @@ function clickChangedSlide2(pagin, e) {
     setTimeout(()=>{
         $('.content_block2').css('left', '20%')
     },400)
-   
-    console.log(window.innerWidth)
+
 }
 
 function clickChangedSlide3(pagin, e) {
+    $('.scrolle_down_respons').removeClass('more_color')
+    $('._slide .slide-overlay').removeClass('d-none')
+    $('.slide_3 .more_about_img').css('left','0%')
+    $('.mian_slider').removeClass('main_slide1_more')
+    $('.mian_slider').removeClass('main_slide2_more')
+    $('.mian_slider').removeClass('main_slide3_more')
+    $('.mian_slider').removeClass('main_slide4_more')
     $('.slider_content').css('transform',`translateX(${-window.innerWidth*2}px)`) 
     $('.loader').addClass('d-none')
     $('.loader3').removeClass('d-none')
@@ -434,11 +452,16 @@ function clickChangedSlide3(pagin, e) {
     $('.pagin3').addClass('active') 
     $('.content_block3').css('transform', 'scale(1)')
    
-    console.log(window.innerWidth)
 
 }
 
 function clickChangedSlide4(pagin, e) {
+    $('.scrolle_down_respons').removeClass('more_color')
+    $('._slide .slide-overlay').removeClass('d-none')
+    $('.mian_slider').removeClass('main_slide1_more')
+    $('.mian_slider').removeClass('main_slide2_more')
+    $('.mian_slider').removeClass('main_slide3_more')
+    $('.mian_slider').removeClass('main_slide4_more')
     $('.slider_content').css('transform',`translateX(${-window.innerWidth*3}px)`) 
     $('.loader').addClass('d-none')
     $('.loader4').removeClass('d-none')
@@ -449,38 +472,7 @@ function clickChangedSlide4(pagin, e) {
     setTimeout(()=> {
         $('.content_block4').css('bottom', '45%')
     },360)
-    console.log(window.innerWidth)
-
 }
-
-function activeSlide1(){
-    count = 1
-    $('.slider_content').css('transform',`translateX(${0}px)`)  
-    $('.slide_1').css('transform','scale(1)')
-
-   
-}
-
-function activeSlide2(width){
-    count = 2
-    $('.slider_content').css('transform',`translateX(${-width}px)`)
-    $('.slide_2').css('transform','scale(1)')
- 
-}
-
-function activeSlide3(width){
-    count = 3
-    $('.slider_content').css('transform',`translateX(${-width*2}px)`)
-    $('.slide_3').css('transform','scale(1)')
-
-}
-
-function activeSlide4(width){
-    count = 4
-    $('.slider_content').css('transform',`translateX(${-width*3}px)`)
-    $('.slide_4').css('transform','scale(1)')
-}
-
 // maous weel slide 1
 // $('.mian_slider .slide_1 .slide-overlay').swipe({
 //     swipe:function(e) {
