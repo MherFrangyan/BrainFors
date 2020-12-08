@@ -228,7 +228,7 @@ function funcnext4(){
     $('.loader').addClass('d-none')
     $('.ball4').css('z-index', '0')
     $('.content_block4').css('bottom', '-4500px')
-    $('.scrolle_down_respons').addClass('more_color')
+    $('.scrolle_down_respons').addClass('d-none')
 }
 
 
@@ -309,7 +309,7 @@ function funcprev4() {
     $('.loader4').removeClass('d-none')
     $('.ball').css('z-index', '0')
     $('.ball4').css('z-index', '-1')
-    $('.scrolle_down_respons').removeClass('more_color')
+    $('.scrolle_down_respons').removeClass('d-none')
 
     // timeoutPrev = setTimeout(()=>{
     //     funcnext4()
