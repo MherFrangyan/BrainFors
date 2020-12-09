@@ -48,7 +48,7 @@ $('.scrolle_down .scrolle_down_icon').on('click', ()=>{
                     $('.slide_block').removeClass('d-none');
                     $('.home_slide1 img').css('transform','translateY(1000px)');
                     $('.home_slide2 img').css('transform','translateY(-1000px)');
-                    $('.nav-list').css('left','1000px');
+                    $('.nav-list').css('left','4000px');
                     $('.nav-toggle').css('right', '-50px')
                     setTimeout(()=>{
                             
