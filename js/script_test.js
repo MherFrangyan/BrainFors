@@ -333,6 +333,7 @@ function viewSlide1(){
     
         $('.pagin').removeClass('active')
     setTimeout(()=>{
+        $('.pagin_number').html("2/04")
         $('.slide_1 .slide-overlay').removeClass('d-none')
         $('.loader').addClass('d-none')
         $('.loader2').removeClass('d-none')
@@ -356,6 +357,7 @@ function viewSlide2(){
         $('.content_block3').css('transform', 'scale(1)')
 
     setTimeout(()=>{
+        $('.pagin_number').html("3/04")
         $('.loader').addClass('d-none')
         $('.loader3').removeClass('d-none')
         $('.ball').css('z-index', '0')
@@ -371,6 +373,7 @@ function viewSlide2(){
 }
 function viewSlide3(){
     setTimeout(()=> {
+        $('.pagin_number').html("4/04")
         $('.slide_3 .slide-overlay').removeClass('d-none')
         $('.scrolle_down_respons').removeClass('more_color')
         $('.slider_content').css('transform',`translateX(${-window.innerWidth*3}px)`)
@@ -397,7 +400,8 @@ function viewSlide3(){
 
 // clicke active slide
 
-function clickChangedSlide1(pagin, e) {
+function clickChangedSlide1() {
+    $('.pagin_number').html("1/04")
     $('.scrolle_down_respons').removeClass('more_color')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')
@@ -415,7 +419,8 @@ function clickChangedSlide1(pagin, e) {
    
 }
 
-function clickChangedSlide2(pagin, e) {
+function clickChangedSlide2() {
+    $('.pagin_number').html("2/04")
     $('.scrolle_down_respons').removeClass('more_color')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')
@@ -435,7 +440,8 @@ function clickChangedSlide2(pagin, e) {
 
 }
 
-function clickChangedSlide3(pagin, e) {
+function clickChangedSlide3() {
+    $('.pagin_number').html("3/04")
     $('.scrolle_down_respons').removeClass('more_color')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.slide_3 .more_about_img').css('left','0%')
@@ -455,7 +461,8 @@ function clickChangedSlide3(pagin, e) {
 
 }
 
-function clickChangedSlide4(pagin, e) {
+function clickChangedSlide4() {
+    $('.pagin_number').html("4/04")
     $('.scrolle_down_respons').removeClass('more_color')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')

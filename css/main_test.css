@@ -566,8 +566,6 @@ position: relative;
 } 
 
 
-
-
 .slide_pagination{
   padding: 0;
   list-style: none;
@@ -584,9 +582,6 @@ position: relative;
   text-align: center;
 
 }
-/* .slide_pagination .pagin1 .ball1{
-  z-index: 0;
-} */
 .slide_pagination .pagin.active i{
   background: black;
 }
@@ -597,13 +592,20 @@ position: relative;
   height: 6px;
   width: 6px;
   margin-top: 15px;
-  background:gray;
+  background:#D7D7D7;
   border-radius: 50%;
 
   transition: background 1s ;
   
 }
-
+.pagin_count{
+  transform: rotate(-90deg) translate(30px,-70%);
+}
+.pagin_count .pagin_number{
+  font-size: 50px;
+  color: #D7D7D7;
+  font-weight: 600;
+}
 
 /* css loader */
 .loader {

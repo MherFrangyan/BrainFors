@@ -157,6 +157,15 @@
     .mian_slider.main_slide3_more .slide_3 .more_about_block .about_content{
         max-height: 420px;
     }
+    .mian_slider .slide_pagination{
+        top:40%;
+    }
+    .slide_pagination .pagin_count{
+        transform: rotate(-90deg) translate(30px,-70%);
+    }
+    .slide_pagination .pagin_count .pagin_number{
+        font-size: 40px;
+      }
 
 }
 
@@ -267,6 +276,12 @@
     .mian_slider .slide_pagination{
         left: 10%;
     }
+    .slide_pagination .pagin_count{
+        transform: rotate(-90deg) translate(20px,-65%);
+    }
+    .slide_pagination .pagin_count .pagin_number{
+        font-size: 30px;
+      }
     .loading-custom-animation .img_content{
         left: 33%;
     }
