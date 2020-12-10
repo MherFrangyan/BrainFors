@@ -1,9 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
     overflow: hidden;
 }
+
+/* page loader start */
 .loading-custom-animation{
     z-index: 99999999;
     background: #fff;
@@ -57,7 +60,9 @@ body{
 .animate__rotateIn.img_content{
     display: block;
 }
+/* page loader end */
 
+/* navbar start */
 .min_menu_block{
   position: absolute;
   left: 0;
@@ -168,8 +173,10 @@ body{
     letter-spacing: 1px;
     margin-right: 20px;
     color: white;
-    /* color: #CBCBCB; */
 }
+/* navbar start */
+
+/* home-page block start */
 .home-page{
   overflow: hidden;
   display: flex;
@@ -198,6 +205,8 @@ body{
 
   transition: transform 1s;
 }
+/* home-page block end */
+
 
 /* new slider main  start*/
 .mian_slider {
@@ -262,10 +271,6 @@ position: relative;
     transition: all 1s;
     
 }
-/* .main_slide1_more .slide-overlay{
-    display: none;
-} */
-
 
 /* slide 2 */
 .slide_2 .more_about_img{
@@ -290,10 +295,6 @@ position: relative;
     transition: top 1s;  
 }
 
-/* .main_slide2_more .slide-overlay{
-  display: none;
-} */
-
 
 /* slide 3 */
 
@@ -317,10 +318,6 @@ position: relative;
   top: -40px;
   
 }
-/* .main_slide3_more .slide-overlay{
-  display: none;
-} */
-
 /* slide 4 */
 
 .slide_4 .more_about_img{
@@ -347,17 +344,10 @@ position: relative;
 
 }
 
-
 .mian_slider.main_slide4_more .slide_4 .more_about_block  .about_content{ 
   top: -40px;
   
 }
-
-/* .main_slide4_more .slide-overlay{
-  display: none;
-} */
-
-
 
 /* prev function start*/
 .mian_slider .slide_1 .more_about_block{
@@ -504,6 +494,7 @@ position: relative;
 }
 
 /* prev function end*/
+
 /* new css end */
 
 .content_block{
@@ -620,6 +611,9 @@ position: relative;
   margin-left: -4px;
   animation: spin 5s linear infinite;
 }
+/* css loader end*/
+
+/* down cover block start */
 .down_line{
   min-height: 250px;
   max-height: 250px;
@@ -691,6 +685,9 @@ position: relative;
   text-align: center;
  
 }
+/* down cover block start */
+
+/* scroll start */
 .hover_scrolle{
   position: relative;
   width: 13%;
@@ -771,6 +768,7 @@ position: relative;
 .more_color .scrolle_down_icon{
   color: red;
 }
+/* scroll end */
 
 
 
