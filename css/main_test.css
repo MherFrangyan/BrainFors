@@ -76,7 +76,7 @@ body{
     height: 70px;
     font-size: 24px;
     color: white;
-    background: rgba(255, 0, 0, 1);
+    background: #23504B;
     margin-left: auto;
     margin-right: 10px;
     display: flex;
@@ -113,10 +113,10 @@ body{
   cursor: default;
 }
 .menu_list li a.active{
-  color: rgb(255, 0, 0) !important;
+  color:#23504B !important;
 }
 .min_menu_block .close_menu:hover{
-  background: rgb(139, 1, 1);
+  background:#23504b7e
 }
 
 .nav-toggle{
@@ -184,7 +184,6 @@ body{
   z-index: 8;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
-  outline: solid red;
 }
 .home-page .slide_home{
   position: relative;
@@ -378,7 +377,7 @@ body{
 }
 .mian_slider .slide_1 .more_about_block .about_content .about_content_title{
   font-size: 45px;
-  color: red;
+  color: #23504B;
   margin-bottom: 50px;
 }
 .mian_slider .slide_1 .more_about_block .about_content .about_content_text{
@@ -418,7 +417,7 @@ body{
 
 .mian_slider .slide_2 .more_about_block .about_content .about_content_title{
   font-size: 45px;
-  color: red;
+  color: #23504B;
   margin-bottom: 50px;
 }
 
@@ -452,7 +451,7 @@ body{
 
 .mian_slider .slide_3 .more_about_block .about_content .about_content_title{
   font-size: 45px;
-  color: red;
+  color: #23504B;
   margin-bottom: 50px;
 }
 
@@ -489,7 +488,7 @@ body{
 
 .mian_slider .slide_4 .more_about_block .about_content .about_content_title{
   font-size: 45px;
-  color: red;
+  color:#23504B;
   margin-bottom: 50px;
 }
 
@@ -647,7 +646,7 @@ body{
   right: 11%;
   left: 1700px;
   height: 250px;
-  background: red;
+  background: #23504B;
 
   transition: left 2s ;
 }
@@ -680,7 +679,7 @@ body{
 }
 
 .down_text p.scroll_text{
-  color: red;
+  color: #23504B;
   padding-top: 100px;
   text-align: center;
  
@@ -699,7 +698,7 @@ body{
   left:0;
   right: 0;
   bottom: 0;
-  background: red;
+  background: #23504B;
   max-height: 0;
 
   transition: all .5s;
@@ -745,7 +744,7 @@ body{
 }
 .scrolle_down:hover .scrolle_down_icon{
   transform: translateY(20px);
-  color: red;
+  color: #23504B;
 }
 
 .scrolle_down_respons{
@@ -766,7 +765,7 @@ body{
 }
 
 .more_color .scrolle_down_icon{
-  color: red;
+  color: #23504B;
 }
 /* scroll end */
 
