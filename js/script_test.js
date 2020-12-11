@@ -1,4 +1,7 @@
 
+let vh = window.innerHeight * 0.01;
+console.log(vh,'wh')
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 $(document).ready(function(){
 
     var count = 0;

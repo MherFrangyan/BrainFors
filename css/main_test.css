@@ -35,7 +35,7 @@ body{
 .loading-custom-animation .count-block{
     display: block;
     max-width: 100%;
-    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 .hiden_loading-custom-animation{
     min-height: 0;
@@ -67,7 +67,7 @@ body{
   position: absolute;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 79;
   background:#F1F1F1;
 }
@@ -183,7 +183,7 @@ body{
   position: absolute;
   z-index: 8;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   outline: solid red;
 }
 .home-page .slide_home{
@@ -200,7 +200,7 @@ body{
 }
 .home-page .slide_home img{
   position: relative;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 50vw;
 
   transition: transform 1s;
@@ -211,7 +211,7 @@ body{
 /* new slider main  start*/
 .mian_slider {
   transform: scale(0);
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw !important;
   margin:auto;
   overflow: hidden;
@@ -241,9 +241,9 @@ body{
   position: relative;
 }
 .mian_slider ._slide img{
-position: relative;
+  position: relative;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   right: 0;
 
   transition: all 1s;
