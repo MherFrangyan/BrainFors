@@ -241,6 +241,7 @@
     
     /* scroll down start */
     .scrolle_down_respons{
+        bottom: 25% !important;
         display: block !important;
     }
     .scrolle_down_respons .scrolle_down_icon{
@@ -483,4 +484,7 @@
     }
     /* page loader end */
   
+    .scrolle_down_respons{
+        bottom: 20% !important;
+    }
 }
