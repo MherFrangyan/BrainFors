@@ -288,13 +288,14 @@ function funcnext4(){
         clearTimeout(clickTimeout)
         clearTimeout(timeNext)
     }
+    $('.scrolle_down_icon').addClass('d-none')
     $('.slide_4 .slide-overlay').addClass('d-none')
     $('.mian_slider').removeClass('main_slide3_more')
     $('.mian_slider').addClass('main_slide4_more')
     $('.loader').addClass('d-none')
     $('.ball4').css('z-index', '0')
     $('.content_block4').css('bottom', '-4500px')
-    $('.scrolle_down_respons').addClass('d-none')
+    
 }
 
 
