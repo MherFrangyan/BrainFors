@@ -740,7 +740,7 @@ body{
 
   transform: translateY(0px);
 
-  translate:all 2s;
+  transition:all .5s;
 }
 .scrolle_down:hover .scrolle_down_icon{
   transform: translateY(20px);

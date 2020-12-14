@@ -2,25 +2,73 @@
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-$(document).ready(function(){
+// loader page anim start
 
-    var count = 0;
-    var counter = setInterval( () => {
-        if(count < 101){
-            if(count == 80){
-                $('.img_content').addClass('animate__rotateIn ')
+
+// $(document).ready(function(){
+
+    //     var count = 0;
+    //     var counter = setInterval( () => {
+    //         if(count < 101){
+    //             if(count == 80){
+    //                 $('.img_content').addClass('animate__rotateIn ')
+    //             }
+    //             $('.count').text(count)
+    //             count++
+    //         }else{
+    //             clearInterval(counter)
+    //             $('.loading-custom-animation').addClass('hiden_loading-custom-animation')
+
+    //             var timeOut = setTimeout(()=>{
+    //                 console.log('.hiden_loading-custom-animation_none')
+    //                 $('.loading-custom-animation').addClass('hiden_loading-custom-animation_none')
+    //             },900)
+
+    //             setTimeout(()=>{
+    //                 $('.down_line').addClass('down_line_hide')
+    //                 setTimeout(()=>{
+    //                     $('.inside_bg_hide').addClass('inside_bg_show')
+    //                     setTimeout(()=>{
+    //                         $('.down_text').addClass('down_text_show')
+    //                         $('.scrolle_down').addClass('scrolle_down_show')
+    //                         $('.scroll_to').addClass('hover_scrolle')
+    //                     },400)
+    //                 },1500)
+    //             },80)
+    //         }
+            
+    //     },30)
+    // });
+
+
+// loader page anim end
+
+
+
+
+// loader page code start
+let count_loader = 0
+
+let loader_interval = setInterval(()=>{
+    $('.count').text(count_loader)
+    count_loader++
+})
+$(window).on('load', function (e){
+    clearInterval(loader_interval)
+    setTimeout(()=>{
+        setInterval(() => {
+            if(count_loader < 100){
+                count_loader++
+                $('.count').text(count_loader)
+                $('.img_content').addClass('animate__rotateIn')
+                if(count_loader === 100){
+                    setTimeout(()=>{
+                        $('.loading-custom-animation').addClass('hiden_loading-custom-animation')
+                    },500)
+                }
+                return
             }
-            $('.count').text(count)
-            count++
-        }else{
-            clearInterval(counter)
-            $('.loading-custom-animation').addClass('hiden_loading-custom-animation')
-
-            var timeOut = setTimeout(()=>{
-                console.log('.hiden_loading-custom-animation_none')
-                $('.loading-custom-animation').addClass('hiden_loading-custom-animation_none')
-            },900)
-
+            });
             setTimeout(()=>{
                 $('.down_line').addClass('down_line_hide')
                 setTimeout(()=>{
@@ -31,13 +79,11 @@ $(document).ready(function(){
                         $('.scroll_to').addClass('hover_scrolle')
                     },400)
                 },1500)
-            },80)
-        }
-        
-    },30)
-   
-  
+            },800)
+    },200)
 });
+// loader page code end
+
 
 var count = 1
 var timeNext = null;
