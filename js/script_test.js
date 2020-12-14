@@ -2,25 +2,73 @@
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-$(document).ready(function(){
+// loader page anim start
 
-    var count = 0;
-    var counter = setInterval( () => {
-        if(count < 101){
-            if(count == 80){
-                $('.img_content').addClass('animate__rotateIn ')
+
+// $(document).ready(function(){
+
+    //     var count = 0;
+    //     var counter = setInterval( () => {
+    //         if(count < 101){
+    //             if(count == 80){
+    //                 $('.img_content').addClass('animate__rotateIn ')
+    //             }
+    //             $('.count').text(count)
+    //             count++
+    //         }else{
+    //             clearInterval(counter)
+    //             $('.loading-custom-animation').addClass('hiden_loading-custom-animation')
+
+    //             var timeOut = setTimeout(()=>{
+    //                 console.log('.hiden_loading-custom-animation_none')
+    //                 $('.loading-custom-animation').addClass('hiden_loading-custom-animation_none')
+    //             },900)
+
+    //             setTimeout(()=>{
+    //                 $('.down_line').addClass('down_line_hide')
+    //                 setTimeout(()=>{
+    //                     $('.inside_bg_hide').addClass('inside_bg_show')
+    //                     setTimeout(()=>{
+    //                         $('.down_text').addClass('down_text_show')
+    //                         $('.scrolle_down').addClass('scrolle_down_show')
+    //                         $('.scroll_to').addClass('hover_scrolle')
+    //                     },400)
+    //                 },1500)
+    //             },80)
+    //         }
+            
+    //     },30)
+    // });
+
+
+// loader page anim end
+
+
+
+
+// loader page code start
+let count_loader = 0
+
+let loader_interval = setInterval(()=>{
+    $('.count').text(count_loader)
+    count_loader++
+})
+$(window).on('load', function (e){
+    clearInterval(loader_interval)
+    setTimeout(()=>{
+        setInterval(() => {
+            if(count_loader < 100){
+                count_loader++
+                $('.count').text(count_loader)
+                $('.img_content').addClass('animate__rotateIn')
+                if(count_loader === 100){
+                    setTimeout(()=>{
+                        $('.loading-custom-animation').addClass('hiden_loading-custom-animation')
+                    },500)
+                }
+                return
             }
-            $('.count').text(count)
-            count++
-        }else{
-            clearInterval(counter)
-            $('.loading-custom-animation').addClass('hiden_loading-custom-animation')
-
-            var timeOut = setTimeout(()=>{
-                console.log('.hiden_loading-custom-animation_none')
-                $('.loading-custom-animation').addClass('hiden_loading-custom-animation_none')
-            },900)
-
+            });
             setTimeout(()=>{
                 $('.down_line').addClass('down_line_hide')
                 setTimeout(()=>{
@@ -31,13 +79,11 @@ $(document).ready(function(){
                         $('.scroll_to').addClass('hover_scrolle')
                     },400)
                 },1500)
-            },80)
-        }
-        
-    },30)
-   
-  
+            },800)
+    },200)
 });
+// loader page code end
+
 
 var count = 1
 var timeNext = null;
@@ -242,13 +288,14 @@ function funcnext4(){
         clearTimeout(clickTimeout)
         clearTimeout(timeNext)
     }
+    $('.scrolle_down_icon').addClass('d-none')
     $('.slide_4 .slide-overlay').addClass('d-none')
     $('.mian_slider').removeClass('main_slide3_more')
     $('.mian_slider').addClass('main_slide4_more')
     $('.loader').addClass('d-none')
     $('.ball4').css('z-index', '0')
     $('.content_block4').css('bottom', '-4500px')
-    $('.scrolle_down_respons').addClass('d-none')
+    
 }
 
 
@@ -336,7 +383,7 @@ function funcprev4() {
     $('.loader4').removeClass('d-none')
     $('.ball').css('z-index', '0')
     $('.ball4').css('z-index', '-1')
-    $('.scrolle_down_respons').removeClass('d-none')
+    $('.scrolle_down_icon').removeClass('d-none')
     timeoutPrev = setTimeout(()=>{
         funcnext4()
         console.log('timeoutPrev, active slid4')
@@ -459,6 +506,7 @@ function clickChangedSlide1() {
     },5000)
     $('.pagin_number').html("1/04")
     $('.scrolle_down_respons').removeClass('more_color')
+    $('.scrolle_down_icon').removeClass('d-none')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')
     $('.mian_slider').removeClass('main_slide2_more')
@@ -487,6 +535,7 @@ function clickChangedSlide2() {
     },5000)
     $('.pagin_number').html("2/04")
     $('.scrolle_down_respons').removeClass('more_color')
+    $('.scrolle_down_icon').removeClass('d-none')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')
     $('.mian_slider').removeClass('main_slide2_more')
@@ -517,6 +566,7 @@ function clickChangedSlide3() {
     },5000)
     $('.pagin_number').html("3/04")
     $('.scrolle_down_respons').removeClass('more_color')
+    $('.scrolle_down_icon').removeClass('d-none')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.slide_3 .more_about_img').css('left','0%')
     $('.mian_slider').removeClass('main_slide1_more')
@@ -546,6 +596,7 @@ function clickChangedSlide4() {
     },5000)
     $('.pagin_number').html("4/04")
     $('.scrolle_down_respons').removeClass('more_color')
+    $('.scrolle_down_icon').removeClass('d-none')
     $('._slide .slide-overlay').removeClass('d-none')
     $('.mian_slider').removeClass('main_slide1_more')
     $('.mian_slider').removeClass('main_slide2_more')
