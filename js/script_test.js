@@ -98,6 +98,7 @@ $('.scrolle_down .scrolle_down_icon').on('click', ()=>{
         setTimeout(()=>{
             $('.inside_bg_hide').removeClass('inside_bg_show')
             setTimeout(()=>{
+                
                 $('.down_line').removeClass('down_line_hide')
                 $('.scrolle_down').removeClass('scrolle_down_show')
                 setTimeout(()=>{
@@ -146,6 +147,7 @@ $('.scrolle_down .scrolle_down_icon').on('click', ()=>{
    
 })
 $('.home-page').on('mousewheel', (e)=> {
+    $('.mian_slider').removeClass('main_slide1_more')
  setTimeout(()=>{
         $('.down_text').removeClass('down_text_show')
         $('.scrolle_down').removeClass('scrolle_down_show')
